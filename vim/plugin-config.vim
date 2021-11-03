@@ -96,9 +96,6 @@ let g:html5_aria_attributes_complete = 0 " atributo Disable WAI-ARIA
 let g:syntastic_pug_checkers = ['pug_lint']
 
 
-"Configuracion de pro.
-
- " let $FZF_DEFAULT_OPTS .= ' --inline-info'
 
  " Modificar Archivos
  let g:NERDTreeMinimalUI = 1  " Hide help text
@@ -126,14 +123,6 @@ let NERDTreeShowHidden=1
 
 "Mostrar lista de marcadores
 let NERDTreeShowBookmarks=1
-
-
-" let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
-" let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
-"
-" let g:NERDTreeFileExtensionHighlightFullName = 1
-" let g:NERDTreeExactMatchHighlightFullName = 1
-" let g:NERDTreePatternMatchHighlightFullName = 1
 
 " you can add these colors to your .vimrc to help customizing
 let s:brown = "905532"
@@ -204,7 +193,7 @@ highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ff
 
 
 " aun no se como funcion aeso xd
-let g:coc_global_extensions = []
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver']
  command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 

@@ -59,6 +59,9 @@ nnoremap <Leader>; $a;<Esc>
 " buffers
 map <Leader>ob :Buffers<cr>
 
+" buffer Pick
+nnoremap <silent> gb :BufferLinePick<CR>
+
 "configuracion para comentarios
 noremap <leader>cc :NERDCommenterComment<cr>
 noremap <leader>c<space> :NERDCommenterToggle<cr>
