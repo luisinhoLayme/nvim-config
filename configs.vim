@@ -13,9 +13,16 @@ set incsearch
 set ignorecase
 set clipboard=unnamedplus
 set cursorline
-set termguicolors
 set showcmd
 set encoding=UTF-8
+
+set termguicolors
+lua << EOF
+require("bufferline").setup{}
+EOF
+
+highlight IconNameDevicon guifg='#428850'
+
 
 " cursorHold
 set updatetime=300

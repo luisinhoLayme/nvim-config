@@ -63,24 +63,24 @@ let g:vsnip_filetypes.javascriptreact = ['javascript']
 let g:vsnip_filetypes.typescriptreact = ['typescript']
 
 "fzf
-let $FZF_DEFAULT_OPTS='--layout=reverse'
-let g:fzf_layout = { 'window': 'call FloatingFZF()'  }
-function! FloatingFZF()
-let buf = nvim_create_buf(v:false, v:true)
-  call setbufvar(buf, '&signcolumn', 'no')
-    let height = float2nr((&lines - 3) / 2)
-let width = float2nr(&columns - (&columns * 2 / 10))
-  let col = float2nr((&columns - width) / 2)
-  let row = float2nr((&lines - height) / 2)
-let opts = {
-          \ 'relative': 'editor',
-          \ 'row': row,
-          \ 'col': col,
-          \ 'width': width,
-          \ 'height': height
-          \ }
-    call nvim_open_win(buf, v:true, opts)
-endfunction
+" let $FZF_DEFAULT_OPTS='--layout=reverse'
+" let g:fzf_layout = { 'window': 'call FloatingFZF()'  }
+" function! FloatingFZF()
+" let buf = nvim_create_buf(v:false, v:true)
+"   call setbufvar(buf, '&signcolumn', 'no')
+"     let height = float2nr((&lines - 3) / 2)
+" let width = float2nr(&columns - (&columns * 2 / 10))
+"   let col = float2nr((&columns - width) / 2)
+"   let row = float2nr((&lines - height) / 2)
+" let opts = {
+"           \ 'relative': 'editor',
+"           \ 'row': row,
+"           \ 'col': col,
+"           \ 'width': width,
+"           \ 'height': height
+"           \ }
+"     call nvim_open_win(buf, v:true, opts)
+" endfunction
 
 
 "wConfiguracion Semantic highlight
@@ -110,11 +110,68 @@ let g:syntastic_pug_checkers = ['pug_lint']
  "Mapeo del explorador de archivos
  let g:NERDTreeChDirMode = 2 "Cambia el directorio actual al nodo padre
 
- let g:NERDTreeDirArrowExpandable = ''
- let g:NERDTreeDirArrowCollapsible = ''
+ " let g:NERDTreeDirArrowExpandable = ''
+ " let g:NERDTreeDirArrowCollapsible = ''
+
+"Cambiar flecha nerdtree
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+"  Mostrar número de línea
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
+
+"Si mostrar archivos ocultos
+let NERDTreeShowHidden=1
+
+"Mostrar lista de marcadores
+let NERDTreeShowBookmarks=1
+
+
+" let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+" let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
+"
+" let g:NERDTreeFileExtensionHighlightFullName = 1
+" let g:NERDTreeExactMatchHighlightFullName = 1
+" let g:NERDTreePatternMatchHighlightFullName = 1
+
+" you can add these colors to your .vimrc to help customizing
+let s:brown = "905532"
+let s:aqua =  "3AFFDB"
+let s:blue = "689FB6"
+let s:darkBlue = "44788E"
+let s:purple = "834F79"
+let s:lightPurple = "834F79"
+let s:red = "AE403F"
+let s:beige = "F5C06F"
+let s:yellow = "F09F17"
+let s:orange = "D4843E"
+let s:darkOrange = "F16529"
+let s:pink = "CB6F6F"
+let s:salmon = "EE6E73"
+let s:green = "8FAA54"
+let s:lightGreen = "31B53E"
+let s:white = "FFFFFF"
+let s:rspec_red = 'FE405F'
+let s:git_orange = 'F54D27'
+
+let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
+let g:NERDTreeExtensionHighlightColor['css'] = s:blue " sets the color of css files to blue
+
+let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
+let g:NERDTreeExtensionHighlightColor['js'] = s:yellow " sets the color of css files to blue
+
+let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
+let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
+
+let g:NERDTreePatternMatchHighlightColor = {} " this line is needed to avoid error
+let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red " sets the color for files ending with _spec.rb
+
+let g:WebDevIconsDefaultFolderSymbolColor = s:green " sets the color for folders that did not match any rule
+let g:WebDevIconsDefaultFileSymbolColor = s:blue " sets the color for files that did not match any rule
 
 function! s:check_back_space() abort
-let col = col('.') - 1
+  let col = col('.') - 1
   return !col || getline('.')[col - 1] =~# '\s'
 endfunction
 " fin de configuracion de nerdtree
@@ -123,6 +180,7 @@ endfunction
 if exists("g:loaded_webdevicons")
     call webdevicons#refresh()
 endif
+
 
 " use current git repo/file director with ctrl p
 let g:ctrlp_working_path_mode = 'ra'

@@ -53,6 +53,12 @@ nnoremap <leader>vs :vsp<CR>
 "hacer un split horizontal
 nnoremap <leader>sp :sp<CR>
 
+" quick semi
+nnoremap <Leader>; $a;<Esc>
+
+" buffers
+map <Leader>ob :Buffers<cr>
+
 "configuracion para comentarios
 noremap <leader>cc :NERDCommenterComment<cr>
 noremap <leader>c<space> :NERDCommenterToggle<cr>
