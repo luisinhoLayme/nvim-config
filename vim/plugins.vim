@@ -23,13 +23,12 @@ Plug 'preservim/nerdtree'
 
 "IDE
 Plug 'Yggdroot/indentLine'
-Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'jbgutierrez/vim-better-comments'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 "Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 " Plug 'lambdalisue/fern-renderer-devicons.vim'
@@ -38,7 +37,6 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'akinsho/bufferline.nvim'
 
 "Plug 'airblade/vim-rooter'
-" Plug 'easymotion/vim-easymotion'
 "Plug 'ap/vim-css-color'
 
 "typing
@@ -75,6 +73,8 @@ endif
 
 
 " Temas
+
+Plug 'glepnir/oceanic-material'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 

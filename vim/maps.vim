@@ -29,6 +29,10 @@ nnoremap <leader>e :e $MYVIMRC<CR>
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
+" Mejor identacion
+vnoremap < <gv
+vnoremap > >gv
+
 " faster scrolling
 nnoremap <C-e> 10<C-e>
 nnoremap <C-y> 10<C-y>

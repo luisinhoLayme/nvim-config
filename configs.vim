@@ -4,6 +4,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+syntax on
 set number
 set rnu
 set numberwidth=1
@@ -44,11 +45,19 @@ set relativenumber
 
 set t_Co=256   " This is may or may not needed.
 set background=dark
-nnoremap <C-l> :set background=light<CR>
 
 set termguicolors     " enable true colors support
-colorscheme gruvbox
+colorscheme oceanic_material " gruvbox, oceanic_material, melange
+nnoremap <S-l> :set background=dark<CR>
+
+"oceanic_material
+" let g:oceanic_material_transparent_background = 1
+" set rtp+=path/to/oceanic-material
+let g:oceanic_material_background="deep"
+
+let g:gruvbox_contrast_light = "hard" "soft hard
 let g:gruvbox_contrast_dark = "hard" "soft hard
+
 highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode

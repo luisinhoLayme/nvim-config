@@ -36,6 +36,7 @@ let g:lightline = {
 
 " NOTE: You can use other key to expand snippet.
 
+
 " Expand
 imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
@@ -198,7 +199,7 @@ let g:coc_global_extensions = ['coc-json', 'coc-tsserver']
 
 
 " HTML, JSX
-"let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
+let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
 
 "  "configuring the highlight devicons
 let g:NERDTreeFileExtensionHighlightFullName = 1
@@ -232,9 +233,6 @@ nnoremap <silent> <expr> <CR> Highlighting()
 
  "configuring clang
  "let g:clang_format#auto_format = 1
-
-" colorear parentecis todas esas cosas relacionados
-let g:rainbow_active = 1
 
 " Emmet
 let g:user_emmet_leader_key=','
