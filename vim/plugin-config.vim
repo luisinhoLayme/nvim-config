@@ -5,8 +5,8 @@
 " Automatically save folds
 augroup AutoSaveFolds
   autocmd!
-  au BufWinLeave *.* mkview 
-  au BufWinEnter *.* silent loadview 
+  au BufWinLeave *.* mkview
+  au BufWinEnter *.* silent loadview
 augroup END
 
 " Lightlane
@@ -125,6 +125,22 @@ let NERDTreeShowHidden=1
 "Mostrar lista de marcadores
 let NERDTreeShowBookmarks=1
 
+let g:NERDTreeWinPos = "right"
+
+" Config nerdtree-git
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+          \ 'Modified'  :'✹',
+          \ 'Staged'    :'✚',
+          \ 'Untracked' :'✭',
+          \ 'Renamed'   :'➜',
+          \ 'Unmerged'  :'═',
+          \ 'Deleted'   :'✖',
+          \ 'Dirty'     :'✗',
+          \ 'Ignored'   :'☒',
+          \ 'Clean'     :'✔︎',
+          \ 'Unknown'   :'?',
+          \ }
+
 " you can add these colors to your .vimrc to help customizing
 let s:brown = "905532"
 let s:aqua =  "3AFFDB"
@@ -211,8 +227,6 @@ autocmd BufRead *.js set filetype=javascript.jsx
 autocmd BufRead *.jsx set filetype=javascript.jsx
 augroup filetype javascript syntax=javascript
 
-" highlight cursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " highlight con enter seleccion y no
 let g:highlighting = 0

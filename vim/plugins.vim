@@ -19,7 +19,7 @@ Plug 'itchyny/lightline.vim'
 
 " Nerdtree
 Plug 'preservim/nerdtree'
-
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 "IDE
 Plug 'Yggdroot/indentLine'
@@ -74,6 +74,7 @@ endif
 
 " Temas
 
+"Plug 'jnurmine/zenburn'
 Plug 'glepnir/oceanic-material'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'

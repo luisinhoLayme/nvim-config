@@ -8,13 +8,42 @@ noremap <leader>fc :Colors<cr>
 noremap <leader>n :NERDTreeToggle<cr>
 
 " coc
+
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" highlight cursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" auto-select the first completation item and notify
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+
+
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+inoremap <C-d> <up>
+inoremap <C-c> <Down>
+" inoremap <expr><C-c> pumvisible() ? "\<C-y>\<Down>" : "\<Down>"
+" inoremap <expr><C-d> pumvisible() ? "\<C-y>\<Up>" : "\<Up>"
+" inoremap <expr><C-b> pumvisible() ? "\<C-y>\<Left>" : "\<Left>"
+" inoremap <expr><C-f> pumvisible() ? "\<C-y>\<Right>" : "\<Right>"
+
+inoremap <C-a> <C-o>^
+inoremap <C-e> <C-o>$
+
 "Sementic color para cambiar de color a las variables
-:nnoremap <Leader>s :SemanticHighlightToggle<cr>
+" :nnoremap <Leader>s :SemanticHighlightToggle<cr>
 
 "diagnostics
 nnoremap <Leader>dia  :<C-u>CocList diagnostics<cr>
@@ -126,8 +155,8 @@ nnoremap <C-t> :call OpenTerminal()<CR>
 
 
 " otra opcion para abrir la terminal
-" vnoremap <c-t> :split term://powershell<CR>:resize 20<CR>
-" nnoremap <c-t> :split term://powershell<CR>:resize 20<CR>
+" vnoremap <c-t> :split<CR>:ter powershell<CR>:resize 20<CR>
+" nnoremap <c-t> :split<CR>:ter powershell<CR>:resize 20<CR>
 
 tnoremap <ESC><ESC> <C-\><C-N>
 

@@ -10,19 +10,16 @@ set rnu
 set numberwidth=1
 set noswapfile
 set nobackup
-set incsearch
-set ignorecase
 set clipboard=unnamedplus
 set cursorline
 set showcmd
 set encoding=UTF-8
 
 set termguicolors
+
 lua << EOF
 require("bufferline").setup{}
 EOF
-
-highlight IconNameDevicon guifg='#428850'
 
 
 " cursorHold
@@ -48,7 +45,7 @@ set background=dark
 
 set termguicolors     " enable true colors support
 colorscheme oceanic_material " gruvbox, oceanic_material, melange
-nnoremap <S-l> :set background=dark<CR>
+nnoremap <S-l> :set background=light<CR>
 
 "oceanic_material
 " let g:oceanic_material_transparent_background = 1
