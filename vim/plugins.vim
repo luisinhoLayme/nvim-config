@@ -18,8 +18,11 @@ Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 
 " Nerdtree
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'preservim/nerdtree'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+            \ Plug 'ryanoasis/vim-devicons'
 
 "IDE
 Plug 'Yggdroot/indentLine'
@@ -32,7 +35,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 "Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 " Plug 'lambdalisue/fern-renderer-devicons.vim'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'akinsho/bufferline.nvim'
 
@@ -73,8 +76,8 @@ endif
 
 
 " Temas
-
-"Plug 'jnurmine/zenburn'
+Plug 'joshdick/onedark.vim'
+Plug 'ayu-theme/ayu-vim'
 Plug 'glepnir/oceanic-material'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'

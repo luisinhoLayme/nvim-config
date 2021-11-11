@@ -45,6 +45,9 @@ inoremap <C-e> <C-o>$
 "Sementic color para cambiar de color a las variables
 " :nnoremap <Leader>s :SemanticHighlightToggle<cr>
 
+nmap <F5> :source ~/AppData/Local/nvim/init.vim<CR>
+vmap <F5> :source ~/AppData/Local/nvim/init.vim<CR>
+
 "diagnostics
 nnoremap <Leader>dia  :<C-u>CocList diagnostics<cr>
 nnoremap <leader>kp :let @*=expand("%")<CR>

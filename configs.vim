@@ -22,6 +22,11 @@ require("bufferline").setup{}
 EOF
 
 
+lua << EOF
+require'colorizer'.setup()
+EOF
+
+
 " cursorHold
 set updatetime=300
 
@@ -40,20 +45,36 @@ set wrap
 set relativenumber
 
 
-set t_Co=256   " This is may or may not needed.
+set t_Co=256   " This is may or may not needed. 256
 set background=dark
 
-set termguicolors     " enable true colors support
-colorscheme oceanic_material " gruvbox, oceanic_material, melange
-nnoremap <S-l> :set background=light<CR>
 
 "oceanic_material
 " let g:oceanic_material_transparent_background = 1
 " set rtp+=path/to/oceanic-material
 let g:oceanic_material_background="deep"
 
+"gruvbox
 let g:gruvbox_contrast_light = "hard" "soft hard
 let g:gruvbox_contrast_dark = "hard" "soft hard
+
+"ayu
+" let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
+" let ayucolor="dark"   " for dark version of theme
+
+
+if (has("autocmd") && !has("gui_running"))
+  augroup colorset
+    autocmd!
+    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
+  augroup END
+endif
+
+set termguicolors     " enable true colors support
+colorscheme onedark " gruvbox, oceanic_material, melange
+nnoremap <S-l> :set background=light<CR>
 
 highlight Normal ctermbg=NONE
 set laststatus=2

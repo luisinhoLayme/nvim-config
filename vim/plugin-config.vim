@@ -27,7 +27,7 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head',
       \   'kitestatus': 'kite#statusline'
       \ },
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'onedark',
       \ 'subseparator': {
       \   'left': '',
       \   'right': ''
@@ -128,18 +128,18 @@ let NERDTreeShowBookmarks=1
 let g:NERDTreeWinPos = "right"
 
 " Config nerdtree-git
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-          \ 'Modified'  :'✹',
-          \ 'Staged'    :'✚',
-          \ 'Untracked' :'✭',
-          \ 'Renamed'   :'➜',
-          \ 'Unmerged'  :'═',
-          \ 'Deleted'   :'✖',
-          \ 'Dirty'     :'✗',
-          \ 'Ignored'   :'☒',
-          \ 'Clean'     :'✔︎',
-          \ 'Unknown'   :'?',
-          \ }
+" let g:NERDTreeGitStatusIndicatorMapCustom = {
+"           \ 'Modified'  :'✹',
+"           \ 'Staged'    :'✚',
+"           \ 'Untracked' :'✭',
+"           \ 'Renamed'   :'➜',
+"           \ 'Unmerged'  :'═',
+"           \ 'Deleted'   :'✖',
+"           \ 'Dirty'     :'✗',
+"           \ 'Ignored'   :'☒',
+"           \ 'Clean'     :'✔︎',
+"           \ 'Unknown'   :'?',
+"           \ }
 
 " you can add these colors to your .vimrc to help customizing
 let s:brown = "905532"
