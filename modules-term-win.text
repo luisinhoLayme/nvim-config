@@ -1,0 +1,10 @@
+
+Import-Module posh-git
+Import-Module oh-my-posh
+Import-Module DirColors
+Import-Module -Name Terminal-Icons
+
+
+Set-PoshPrompt -Theme bubblesline
+#temas: bubbles, slim, pixelrobots, microverse-power, craver
+#Set-Theme Zash
