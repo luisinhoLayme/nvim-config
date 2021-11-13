@@ -42,6 +42,8 @@ inoremap <C-c> <Down>
 inoremap <C-a> <C-o>^
 inoremap <C-e> <C-o>$
 
+
+
 "Sementic color para cambiar de color a las variables
 " :nnoremap <Leader>s :SemanticHighlightToggle<cr>
 
@@ -106,6 +108,7 @@ noremap <leader>ci :NERDCommenterInvert <cr>
 noremap <leader>cy :NERDCommenterYank<cr>
 noremap <leader>cg :NERDCommenterToEOL<cr>
 noremap <leader>cu :NERDCommenterUncomment<cr>
+noremap <leader>ca :NERDCommenterAltDelims<cr>
 
 " para salir de modo de insercion
 :imap ii <Esc>

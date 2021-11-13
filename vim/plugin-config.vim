@@ -9,10 +9,27 @@ augroup AutoSaveFolds
   au BufWinEnter *.* silent loadview
 augroup END
 
+"nerdcommenter
+
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_javascript = 1
+
+" Add your own custom formats or override the defaults
+" let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+
+let g:NERDCustomDelimiters = { 'javascript.jsx': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' } }
+
+" let g:NERDCustomDelimiters={
+"   \ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
+" \}
+
+
+
 " Lightlane
 let g:lightline = {
       \ 'active': {
-      \   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
       \   'right': [['kitestatus'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
       \ },
       \ 'inactive': {
@@ -27,7 +44,7 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head',
       \   'kitestatus': 'kite#statusline'
       \ },
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'gruvbox',
       \ 'subseparator': {
       \   'left': '',
       \   'right': ''
@@ -127,6 +144,18 @@ let NERDTreeShowBookmarks=1
 
 let g:NERDTreeWinPos = "right"
 
+" gitgutter
+let g:gitgutter_sign_added = '✚'
+let g:gitgutter_sign_modified = '✹'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '-'
+let g:gitgutter_sign_modified_removed = '-'
+
+let g:gitgutter_map_keys = 0
+let g:gitgutter_max_signs = 500  " default value (Vim < 8.1.0614, Neovim < 0.4.0)
+let g:gitgutter_max_signs = -1   " default value (otherwise)
+
+
 " Config nerdtree-git
 " let g:NERDTreeGitStatusIndicatorMapCustom = {
 "           \ 'Modified'  :'✹',
@@ -194,19 +223,19 @@ let g:ctrlp_use_caching = 0
 
 "signify
 "Change these if you want
-let g:signify_sign_add               = '+'
-let g:signify_sign_delete            = '_'
-let g:signify_sign_delete_first_line = '‾'
-let g:signify_sign_change            = '~'
+" let g:signify_sign_add               = '+'
+" let g:signify_sign_delete            = '_'
+" let g:signify_sign_delete_first_line = '‾'
+" let g:signify_sign_change            = '~'
 
 " I find the numbers disctracting
 let g:signify_sign_show_count = 0
 let g:signify_sign_show_text = 1
 
 " If you like colors instead
-highlight SignifySignAdd   ctermbg=green guibg=#00ff00
-highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
-highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
+" highlight SignifySignAdd   ctermbg=green guibg=#00ff00
+" highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
+" highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
 
 
 " aun no se como funcion aeso xd

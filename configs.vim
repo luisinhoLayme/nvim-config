@@ -16,6 +16,8 @@ set showcmd
 set encoding=UTF-8
 
 set termguicolors
+set noshowmode
+
 
 lua << EOF
 require("bufferline").setup{}
@@ -34,6 +36,9 @@ set updatetime=300
 set splitbelow
 set splitright
 filetype plugin indent on
+filetype plugin on
+
+set commentstring={/*\ %s\ */}
 
 set colorcolumn=120
 highlight ColoColumn ctermbg=0 guibg=lightgrey
@@ -51,34 +56,25 @@ set background=dark
 
 "oceanic_material
 " let g:oceanic_material_transparent_background = 1
-" set rtp+=path/to/oceanic-material
-let g:oceanic_material_background="deep"
+let g:oceanic_material_background="darker" " deep
+let g:oceanic_material_allow_italic = 1
 
 "gruvbox
-let g:gruvbox_contrast_light = "hard" "soft hard
+let g:gruvbox_contrast_light = "hard" "soft hard medium
 let g:gruvbox_contrast_dark = "hard" "soft hard
-
-"ayu
-" let ayucolor="light"  " for light version of theme
-let ayucolor="mirage" " for mirage version of theme
-" let ayucolor="dark"   " for dark version of theme
-
-
-if (has("autocmd") && !has("gui_running"))
-  augroup colorset
-    autocmd!
-    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
-    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
-  augroup END
-endif
+let g:gruvbox_italic=1
+" let g:gruvbox_transparent_bg=1
+let g:gruvbox_hls_cursor='blue'
 
 set termguicolors     " enable true colors support
-colorscheme onedark " gruvbox, oceanic_material, melange
+colorscheme gruvbox " gruvbox, oceanic_material, melange
 nnoremap <S-l> :set background=light<CR>
 
-highlight Normal ctermbg=NONE
+" estos son para que funcione transparent gruvbox
+" hi Normal ctermbg=NONE guibg=NONE
+" hi NoText ctermbg=NONE guibg=NONE
+
 set laststatus=2
-set noshowmode
 
 " Searching
 set hlsearch                    " highlight matches

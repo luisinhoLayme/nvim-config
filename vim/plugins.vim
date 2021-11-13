@@ -18,8 +18,6 @@ Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 
 " Nerdtree
-" Plug 'preservim/nerdtree'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
             \ Plug 'ryanoasis/vim-devicons'
@@ -28,14 +26,15 @@ Plug 'preservim/nerdtree' |
 Plug 'Yggdroot/indentLine'
 Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdcommenter'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf'
+" Plug 'junegunn/fzf.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+
 Plug 'jbgutierrez/vim-better-comments'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 "Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 " Plug 'lambdalisue/fern-renderer-devicons.vim'
-" Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'akinsho/bufferline.nvim'
 
@@ -65,19 +64,13 @@ Plug 'christoomey/vim-tmux-navigator'
 
 
 "git ks
-Plug 'tpope/vim-repeat'
+
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-
-if has('nvim') || has('patch-8.0.902')
-    Plug 'mhinz/vim-signify'
-else
-    Plug 'mhinz/vim-signify', { 'branch': 'legacy'  }
-endif
-
+" Plug 'mhinz/vim-signify'
 
 " Temas
-Plug 'joshdick/onedark.vim'
-Plug 'ayu-theme/ayu-vim'
+
 Plug 'glepnir/oceanic-material'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
