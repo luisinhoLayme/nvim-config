@@ -120,8 +120,8 @@ let g:syntastic_pug_checkers = ['pug_lint']
  let g:NERDTreeAutoDeleteBuffer = 1
 
  "NERDTree
- "autocmd StdinReadPre * let s:std_in=1
- "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+ autocmd StdinReadPre * let s:std_in=1
+ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
  "Mapeo del explorador de archivos
  let g:NERDTreeChDirMode = 2 "Cambia el directorio actual al nodo padre
 

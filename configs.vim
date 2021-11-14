@@ -18,7 +18,6 @@ set encoding=UTF-8
 set termguicolors
 set noshowmode
 
-
 lua << EOF
 require("bufferline").setup{}
 EOF
@@ -37,8 +36,6 @@ set splitbelow
 set splitright
 filetype plugin indent on
 filetype plugin on
-
-set commentstring={/*\ %s\ */}
 
 set colorcolumn=120
 highlight ColoColumn ctermbg=0 guibg=lightgrey
@@ -67,12 +64,31 @@ let g:gruvbox_italic=1
 let g:gruvbox_hls_cursor='blue'
 
 set termguicolors     " enable true colors support
-colorscheme gruvbox " gruvbox, oceanic_material, melange
+colorscheme oceanic_material " gruvbox, oceanic_material, melange
 nnoremap <S-l> :set background=light<CR>
 
 " estos son para que funcione transparent gruvbox
 " hi Normal ctermbg=NONE guibg=NONE
 " hi NoText ctermbg=NONE guibg=NONE
+
+hi Search guibg=none guifg=none gui=reverse
+" highlight IncSearch guibg=green ctermbg=green term=underline
+
+" Visual Mode Orange, #FD971F Background, Black Text
+" hi Visual    guifg=#000000 guibg=#3E3D32
+hi Visual    guifg=none guibg=#515A5A gui=none
+
+" Default Colors for CursorLine
+highlight CursorLine guibg=#3E3D32
+highlight Cursor guibg=#A6E22E
+
+" Change Color when entering Insert Mode
+autocmd InsertEnter * highlight  CursorLine guibg=#323D3E
+autocmd InsertEnter * highlight  Cursor guibg=#00AAFF
+
+" Revert Color to default when leaving Insert Mode
+autocmd InsertLeave * highlight  CursorLine guibg=#3E3D32
+autocmd InsertLeave * highlight  Cursor guibg=#A6E22E
 
 set laststatus=2
 

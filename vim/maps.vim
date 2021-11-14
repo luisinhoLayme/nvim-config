@@ -123,6 +123,8 @@ nmap <leader>gk <plug>(signify-prev-hunk)
 nmap <leader>gJ 9999<leader>gJ
 nmap <leader>gK 9999<leader>gk
 
+
+
 " terminal
 function! OpenTerminal()
   " move to right most buffer
